@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>For Loop</title>
+</head>
+<body>
+		<p id="demo"></p>
+		<h4 id="demo2"></h4>
+
+</body>
+<script type="text/javascript">
+		var students = ['David', 'Tobi', 'Tosin', 'Segun', 'Jimi', 'Ada', 'Bolaji']
+		var text =  "", name = ''
+		for (var i = 0; i <= students.length -1; i++) {
+			text += students[i] + '<br>'
+		}
+
+		for( x in students){
+			name += students[x] + '<br>'
+		}
+		document.getElementById("demo").innerHTML = text;
+		document.getElementById("demo2").innerHTML = name;
+</script>
+</html>

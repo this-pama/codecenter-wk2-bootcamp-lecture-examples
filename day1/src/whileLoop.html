@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>While Loop</title>
+</head>
+<body>
+		<p id="demo"></p>
+		<h4 id="demo2"></h4>
+
+</body>
+<script type="text/javascript">
+		var students = ['David', 'Tobi', 'Tosin', 'Segun', 'Jimi', 'Ada', 'Bolaji']
+		var text =  "", name = '', i = 0
+		while(i < students.length){
+			text += students[i] + '<br>'
+			i++
+		}
+		
+		var n=0
+
+		do{
+			name += students[n] + '<br>'
+			n++
+		}
+		while(n < students.length)
+
+		document.getElementById("demo").innerHTML = text;
+		document.getElementById("demo2").innerHTML = name;
+</script>
+</html>
