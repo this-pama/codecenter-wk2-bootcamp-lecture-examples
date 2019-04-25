@@ -1,0 +1,413 @@
+array are data types. arrrays are like set in mathematics
+
+example
+
+var arr = [2, 4, 6, 'number', 'set']
+
+array can contain any data type... like strings, object, number 
+
+
+There are array methods like strings methods.
+
+length method   --- it returns the length of the array.
+push() method  -- the push method adds an element as the last content of the array. It will then return the length of the array.
+pop() method   ---- pop method delete the last value in an array. it then returns the deleted value.
+forEach() methods.   --- this gives you the ability to apply a function to each value of an array. 
+
+				lets imagine i want to print out each value in our array. I will use the forEach method to apply a function that prints the value one after the other.
+
+
+what do they do?
+
+
+var myFunc= function(element){
+    console.log(element)
+}
+
+
+arr.forEach(myFunc)
+
+the forEach method, takes each value in the array and applys the myFunc function on it.
+the array has 5 values right? so it takes the value one after the other and applies the function till the last value in the array.
+
+
+
+
+
+the value here is a user defined variable. you can use anything.
+
+this function takes a value, and prints it.
+
+
+toString() method converts my array to a string.
+join() method is similar to toString method. the join method can take an arguement and it will apply the parameter as a seperator to each value in the array.
+
+
+
+ERROR
+there are basically three syntax to deal will error. They are 
+Try, Catch, Throw.
+
+lets try an example
+
+we are going to intentionally introduce an error into our code. we are going to use the try, catch and throw syntaxs.
+
+try{
+    allllert('I intentionally introduce and error')
+}catch(err){
+    throw 'This is a custom error'
+}
+
+this wouldnt run in the try block because there is an error.
+
+The catch syntax sees this error when the try code tries to run, so the catch block is executed.
+
+In the catch block, i am now throwing a custom error instead of the default error the browser will throw.
+
+
+If you use try, you must catch . but you dont necessarilly have to throw the error. You throw errors when you want a custom error.
+
+
+
+
+DEBUGGING
+debugging is a great skill every programmer have have. Debugging is a way you have out errors in your code using tools.
+The most popular tool i s the developer tool in your browser.
+
+One very important way is to use console.log() to log your values to be able to know what is going on in your code.
+
+
+JSON
+What is JSON?
+it means JavaScript Object Notation. JSON is not language specific. ie. it is not use only in JS, every other programming language use it. JSON is like the object we are familiar with.
+
+JSON is a pair of key and value just like objects. We can access the values of JSON just like we do for objects. because json are objects.
+
+How do we now transfer JSOn from the server to the browser?
+
+
+we can make use of the javascript FETCH. This is the syntax of fetch. Fetch gives us the ability to be able to communicate with the server and even excahge data.
+
+The fetch api is an asynchronous function that returns a promise. This means that other part of the program can continue to run while the fetch returns a data from then server and makes it available for any part of your code that needs it at any time.
+
+fetch(url)
+.then( function(response){
+	response.json()    --------------------this convert and extract the json part of the response from the server. This is also dependent on what you want to achieve
+	console.log(response.json())
+
+	JSON.stringify(res) 
+}
+)
+.then( function(res){
+	JSON.stringify(res)  ---------------- converts my response json to a string.  This is dependent on what you want to achieve with you data from the server.
+})
+.then()...
+
+
+url --- is the url of the server or endpoint you want to communicate with.
+
+the then() method is for you to manipulate your response from the server. So the then method can do anything you want from the server. 
+Basiscally, the first thing to do with your response is to convert it to a json. This is because, the response coming from your server contains a lot of data you dont need. This data are only needed by the browser or mobile phones. 
+
+
+
+
+
+your response from the server will always contain unncessary things that you as a human dont need, like the header, the status code, the protocol, etc
+
+response.json()   --- convert your data to a json.
+
+
+we want to use fetch to call an api from a server which checks weather conditions.
+
+
+then() method makes your code wait for the promise before it can continue running. When you use fetch, your server does not immediately respond, the then() method now makes your code wait for the reponse from the server before it execute some part of your code.
+
+the code converts and extract the response from the server to json format.
+
+
+when we console.log the response,json(), we realize that it still contain some data that we dont need, that is why we used the second then() method to me able to manipulate the return value from the first then() method
+
+
+
+the parameter is taking what the first then() method is returning
+
+
+
+you can save your parameter in a global variable
+
+
+
+
+Set Interval & Set Time Out
+
+This is the way we deal with tasks that are timed in javascript. So if i want to perform a repetitive task with an interval of a specific tiome. I will use setInterval().
+
+setTimeOut(function, time)   ----- syntax
+
+let's say i want to print out the name after 5 sec( 5 * 1000)
+
+let's say i want to do a repetive task.  I will use setInterval
+
+setInterval(function, time)
+
+
+
+DOM
+
+javascript give me the ability to manipulate the element of an html page
+
+
+this events are DOM manipulation of the browser html tree.
+
+
+
+The BOM is calling on the browser function. They are functions that came with every browser. And it is generally refered to as window.
+
+
+
+
+if i want to concatinate inside a string, i will use backtick  
+
+
+`my age is ${myAge}`
+
+
+
+
+
+i hope you can remember how we generally declare objects?
+
+var obj={
+	key: values
+}
+
+but imagine if we have a lot of objects that is going to take the same pattern. example is a person. Human being have the same properties right?
+
+we can declare a blueprint for a person object that all person or human beign can use.
+
+instead of having to create an object for each person i can create an object contructor ---- in this case a blueprint.
+
+
+this is how you do it.
+
+you declare it as a function that takes arguements, in this case its now going to be a class.
+
+A class is a function which you just declare by capitalizing it.
+
+
+example
+
+function Person(firstName, lastName, age, height, weight){
+	this.firstName = firstName
+	this.lastName = lastName
+	this.age = age,
+	this.height = height
+	this.weight = weight
+
+	this.fullName = function(){
+		return this.firstName + " " + this.lastName
+	}
+}
+
+Person.prototype.myAge = function(){
+	return 'my age is ${this.age}'
+}
+
+
+Person.prototype.nationality = 'Nigerian'  -----------this becomes default property for every person created with the contructor
+
+
+var segun = new Person(segun, bobo, 12, 123, 30)
+
+var tobi = new Person(tobi, nana, 12, 130, 12)
+
+var tosin = new Person(tosin, mama, 34, 120, 90)
+var dapo = new Person
+
+tosin.nationality(nigerian)
+
+segun.fullName
+
+
+
+with what i have just done on obj, i have added a method called myAge on obj.
+
+if you  want to add a property or a method to an object contructor, you have to use the prototype method on it.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

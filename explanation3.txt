@@ -1,0 +1,371 @@
+yesterday we ran into an error when we were tryiny to use DOM
+
+document.getElelmentsByTagName
+document.getElelmentsByClassName
+
+
+why were we having issue?
+
+we have forgotten that the document.getElelmentsByTagName and document.getElelmentsByClassName returns an array of elements.
+
+
+var elem = document.getElelmentsByClassName('code')
+
+elem will be an array of elements with cde as the classname
+
+elem[0].innerHTML = 'This is an example'
+
+
+the mistake yesterday was that we were not picking by array
+
+
+is there any other thing that you dont understand since we started the fundamentals of javascript?
+
+
+when we started this class i told you that js can be use for not just front end development, it can be use for server side development and even desktop app. js can also be use for hardware development.
+
+
+But for today, we shall look at how we can use js for server side development.
+
+we shall be looking at how to use Node JS
+
+Node JS uses v8 engine. V8 engine is developed by google, i think. Because , Chrome uses V8.
+
+
+Node JS is a powerful tool that make us write multi thred applicacation.
+
+Unlike Apache that can not handle to much load and real time data manipulation, Node JS does that off the shelf. Node Js run the most popular real time data appplications.
+
+Node Js does not just run on the web, it can be use with mobile, and even hardware.
+
+Node JS server side scripting is done using plain JavaScript. so all the codes we will be writing are js code.
+
+our knowledge of js fundamental will be handy here.
+
+
+in node js, u will hear modules alot. modules are libraries. tthey are codes that have been written by someone or some people and made available to you since Node Js is open source
+
+Does anyone knows what we mean by open source? 
+
+in software space, when you hear open source, it mean the program or code or technology or framework is totally free and anybody can contribute his/her code to improve the program
+
+the modules you are seeing has being built with node js and it is on ur system if you have installed node js. but this is a few out of millions of modules present for node js
+
+
+if i want to use any module in my program. I will use the syntax require
+
+example, if i want to use the module http, i will do
+
+var myHttp = require('http')
+
+what if it does come as a pre built module in node js?
+
+http is a prebuilt module
+
+
+what if i want to use a module called segun and segun is not prebuilt in node js?
+
+any idea?
+
+var mySegunModule = require('segun')
+
+segun is not a default module that came with node js, so how does node js sees segun
+
+
+
+i once told you about this....
+
+
+
+the package manager
+
+
+Node Js has a package manager called NPM  --- Node Package manager
+
+
+Npm manages all the modules that node uses.
+
+
+so to be able to use segun, npm has to install it for me
+
+
+for me to install segun module, i will do inside my git, inside the root folder of my project
+
+
+
+npm install segun --save
+
+this will install segun as a dependency in the package.json
+
+
+
+two things to note.
+
+
+dev Dependency
+are packages or module that node js is just using in your development environment, ie ur system for your app to work
+
+
+Dependency
+
+are packages or modules that your app solely rely on to work
+
+
+
+
+
+if you are building any app, there is a very important file, without which your app can not run. This file is called package.json.
+the package.json file contains all information about your app, i mean every bit of information. 
+
+one of the very important information in your app is the dependency.
+
+literarilly, it means, the modules that your app depend on to run.
+
+There are two types of dependency,
+1. dependencies
+2.devDependencies
+
+dependencies are modules that your app fully rely on to work, without which it can not work..
+
+
+devDependencies are the modules that you as a developer is using to develop the app. without which you can not run the app on your local system.
+
+
+
+luckily enough for us developer, all modules states how to use them and how to install them. in this installation instruction, they tell us whether they are devDependencies or dependencies.
+
+
+they will always indicate this by telling us to install using the flag method in our bash environment. Exanmple
+
+
+npm install express --save    { this installation method shows that express is a full dependency module}
+
+npm install babel --dev-save   { this installation instruction shows that babel is a dev dependency}
+
+
+you said my app relies on my dependency towork, then dev dependency for me to be able to run it onmy system, so they are almost the same, why can't i use a module for both, it is confusing me
+
+
+cool
+
+pls note, the dependencies we are taking about are modules. They are just not the ones that came with node js. they are the ones i have to install before i can use it in my app. 
+
+
+
+so dependencies are modules.    
+
+
+now, remember when you finish building your app, it is not going to be on your pc forever especially if you want other people to be able to see it. You have to host it...... this is what we call deployment
+
+
+
+Deployment is the production stage. At production stage, the server you want to install your app on has all the environmental variable that you need, and they will only look into your package.json file and help you install the modules or dependecies in this case on the server. so they dont need your dev dependencies.
+
+
+
+
+
+the dev dependencies are want you as a developer need to develop the app on your pc, remote server already has all this things and they don want to install your own because they dont trust whether yours has all security threath taken care of.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

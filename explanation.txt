@@ -1,0 +1,231 @@
+strings methods are functions you can call on a string.
+
+stg i s a sting in our example here
+
+
+length method gives me the length of my string
+
+stg.length 
+stg.toUpperCase()   --- this turns my string to capital lethher
+
+indexOf() methods gives me the index of a word in a string
+
+lastIndexOf()
+
+How do you declare a date?
+
+new Date()
+
+Javascript date is in milliseconds
+
+what are the methods you can call on a date?
+
+- toDateString()
+-  toGMTString()
+ - tolocaleDateString()
+ - toUTCString()
+
+
+ Scope & this
+
+'this' is an object or scope binder.
+this binds a property to his owner
+
+
+var person = {
+	firstName : 'Segun',
+	lastName: 'Bolaji'
+	fullName: function(){
+		return this.firstName + this.lastName
+	}
+}
+
+
+fullNmae is a function inside the object person.   this makes fullName a method.
+
+To bind the fullNmae as a method to the properties of person.... this comes into play
+
+Return is a keyword. It returns what you defin when you call a function.
+
+Here this binds the properties (firstName & lastName ) to the object Person. This is owned by object Person
+
+
+Other things to have in mind.
+
+there are global and local scope
+let me explainwhat global and local scope means first.
+
+
+
+global scope or variable so to speak, is a scope or variable to is accessible form anywhere within your code
+
+
+local is only accessible within a function or block of code.
+
+
+
+
+
+lets see an example of local scope.
+
+
+in the function My Function that we have declared.
+
+number and count is a local variable  because you can only use the variable inside the function myFunction.
+
+
+here count and number are global variable because we defined them outside of the myFunction block. This makes any function to be able to use the variables count and number.
+
+
+
+Variables.... How do you declare variables?
+
+ther are 3 basic ways to declare variables in JS
+
+var --- is use for a changing variable
+let 
+const ---- const can not be changes once you declare it. you can only use it for a variable you are sure wont change. if you try to change a const variable it will throw an error.
+
+
+
+What is RegEx?
+
+it means regular expression. It is used in search pattern. You use regular expression for a search you are not sure of the content or how it is going to look like.
+
+Lets say i want to search a 50 pahe document for my name and number. and im not sure how my name is going to appear in it. 
+
+It could ba all capital letter, all small letter, or inbetween.
+
+
+
+you start a regex declaration with a  forward slash----    /dapo\saderemi\s\d+ /i
+
+the above regex finds my name (dapo aderemi) followed by a space and numbers which must be more than one digit. the modifier i tells the pattern to be case insensitive.
+
+
+if i use test() method on a regular expression, it returns true or false. if the pattern exist, it return true, else it rturn false.
+
+
+
+if i use exec() method on a regular expression pattern, it return null if it cant find it and it returns object if it can find it.
+
+
+
+GIT??????
+
+Git is a version control system you use to manage your code.
+
+Git works with local and remote repository. You local repository is always on your system while the remote repository can be your Github or BitBucket.
+
+
+You basically push your code from your local repository to remote repository from git.
+
+
+How do you use Git
+1. You have to have Java JDK installed on your system
+You have to have Node JS installed on your system
+You have to have Git installed on your PC
+
+
+If you ave all these, you now need to create an account on Github.
+
+
+if yes, you are cool to go....
+
+
+How do you initiate git in your code or project directory???
+
+
+You use 'git init'
+
+lets say i have opened my project folder. i now want to initiate git inside my folder
+
+
+git init -------means initiate git inside this folder
+
+
+after i have initiated git, it will automatically create a branch called master.  This branch is in my local repository which is on my PC.
+
+
+I need to start add files or folder to my repository.
+
+
+you use 'git add'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

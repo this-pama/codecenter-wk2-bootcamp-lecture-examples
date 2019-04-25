@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Deno</title>
+</head>
+<body>
+
+	<div class="myClass" style="color: red">
+		<p id="example"></p>
+
+	</div>
+	
+	<button onclick="myFunc()"  > Click Me</button>
+
+</body>
+
+<script type="text/javascript">
+	
+	window.document.getElementById('example').innerHTML = 'this is an example'
+	window.document.getElementById('example').style.color = 'blue'
+
+	var myFunc = function() {
+			window.close()
+	}
+
+
+	var myMouse= function(){
+		alert('this is a mouse over event')
+	}
+</script>
+</html>
